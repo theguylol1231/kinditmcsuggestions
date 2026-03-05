@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinds Crystal Optimizer Questions Dashboard</title>
+    <style>
+      body {
+        margin: 0;
+        background: #eef2ff;
+        font-family: Arial, sans-serif;
+        color: #111827;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+      }
+
+      h1, h2 {
+        margin-top: 0;
+      }
+
+      .question-list li {
+        margin-bottom: 0.6rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-weight: 600;
+      }
+
+      input,
+      textarea,
+      button {
+        width: 100%;
+        font: inherit;
+      }
+
+      input,
+      textarea {
+        padding: 0.55rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        margin-bottom: 0.8rem;
+      }
+
+      button {
+        border: 0;
+        background: #2563eb;
+        color: white;
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      a {
+        color: #2563eb;
+      }
+
+      .hidden {
+        position: absolute;
+        left: -9999px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Kinds Crystal Optimizer Questions Dashboard</h1>
+                <p><a href="/">Back to poll</a></p>
+      </section>
+
+      <section class="card">
+        <h2>All the Questions</h2>
+        <ul class="question-list">
+          <li>Should I make a Crystal Optimizer?</li>
+          <li>What should be the first feature?</li>
+          <li>Which platforms should it support first?</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Recommend Mods</h2>
+        <form
+          name="mod-recommendations"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="mod-recommendations" />
+
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <label for="player-name">Name</label>
+          <input id="player-name" name="name" type="text" placeholder="Your name" />
+
+          <label for="mods">Type your recommended mods</label>
+          <textarea
+            id="mods"
+            name="recommended_mods"
+            rows="6"
+            required
+            placeholder="Example: Fast Crystal Routing, Better Crystal Sorting, Auto Refinery Booster"
+          ></textarea>
+
+          <button type="submit">Submit Mod Recommendations</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
